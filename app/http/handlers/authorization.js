@@ -4,7 +4,6 @@ exports = module.exports = function(issue, parse) {
     parse('application/x-www-form-urlencoded'),
     require('oauth2orize-device-code').middleware.request(issue)
   ];
-  
 };
 
 exports['@require'] = [
