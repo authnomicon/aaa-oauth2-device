@@ -1,12 +1,13 @@
-exports = module.exports = function(issue) {
+exports = module.exports = function(issue, parse) {
 
   return [
-    require('body-parser').urlencoded({ extended: false }),
+    parse('application/x-www-form-urlencoded'),
     require('oauth2orize-device-code').middleware.request(issue)
   ];
   
 };
 
 exports['@require'] = [
-  './authorization/issue'
+  './authorization/issue',
+  'http://i.bixbyjs.org/http/middleware/parse'
 ];
