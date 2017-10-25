@@ -1,1 +1,1 @@
-# nodex-aaa-oauth2-device
+# @authnomicon/oauth2-device
