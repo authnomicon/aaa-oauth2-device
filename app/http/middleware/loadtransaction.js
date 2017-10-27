@@ -15,7 +15,7 @@ exports = module.exports = function() {
          scope: [ 'send', 'receive' ],
          authenticationSchemes: [ 'bearer', 'hawk' ] },
       req: 
-      { type: 'code',
+      { type: 'device_code',
          //type: 'device_code',
          display: 'page' },
       user: undefined };

@@ -25,6 +25,7 @@
   "assembly": {
     "namespace": "oauth2/device",
     "components": [
+      "response",
       "http/authorization",
       "http/verification"
     ]
