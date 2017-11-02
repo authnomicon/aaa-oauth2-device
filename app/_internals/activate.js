@@ -1,7 +1,7 @@
 exports = module.exports = function() {
   
-  return function activate(_, cb) {
-    console.log('ACTIVATE IT!');
+  return function activate(client, deviceCode, user, cb) {
+    console.log('ACTIVATE IT! - ' + deviceCode);
     return cb();
   };
 };

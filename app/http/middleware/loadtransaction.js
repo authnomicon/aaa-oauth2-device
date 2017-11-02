@@ -5,6 +5,7 @@ exports = module.exports = function() {
     console.log(req.body)
     
     req.oauth2 = { transactionID: '1235',
+      locals: { deviceCode: 'foofoof' },
       client: 
        { id: '1',
          name: 'OAuth 1.0 Client',

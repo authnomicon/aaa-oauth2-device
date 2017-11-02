@@ -1,7 +1,7 @@
 exports = module.exports = function(container, activate, logger) {
   var device = require('oauth2orize-device-code');
   
-  var modeComps = container.components('http://schemas.authnomicon.org/js/oauth2/device/responseMode');
+  var modeComps = container.components('http://schemas.authnomicon.org/js/oauth2/responseMode');
   return Promise.all(modeComps.map(function(comp) { return comp.create(); } ))
     .then(function(plugins) {
       var modes = {}
@@ -12,7 +12,7 @@ exports = module.exports = function(container, activate, logger) {
         logger.info('Loaded response mode for OAuth 2.0 device flow: ' + name);
       });
       
-      return device.grant.activate({
+      return device.grant.deviceCode({
         modes: modes
       }, activate);
     });
