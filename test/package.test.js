@@ -11,7 +11,8 @@ describe('@authnomicon/oauth2-device', function() {
     it('should have assembly metadata', function() {
       expect(json.assembly.namespace).to.equal('oauth2/device');
       
-      expect(json.assembly.components).to.have.length(2);
+      expect(json.assembly.components).to.have.length(3);
+      expect(json.assembly.components).to.include('response');
       expect(json.assembly.components).to.include('http/authorization');
       expect(json.assembly.components).to.include('http/verification');
     });
