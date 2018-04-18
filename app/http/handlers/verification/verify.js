@@ -1,4 +1,4 @@
-exports = module.exports = function(server, loadTransaction, processTransaction, completeTransaction, prompt, parse) {
+exports = module.exports = function(server, loadTransaction, processTransaction, completeTransaction, /*prompt,*/ parse) {
 
   function verify(req, res, next) {
     console.log('VERIFY IT')
@@ -13,7 +13,7 @@ exports = module.exports = function(server, loadTransaction, processTransaction,
       processTransaction,
       completeTransaction
     ),
-    prompt()
+    //prompt()
   ];
 };
 
@@ -22,6 +22,6 @@ exports['@require'] = [
   '../../middleware/loadtransaction',
   'http://schemas.authnomicon.org/js/oauth2/http/authorize/processTransactionFunc',
   'http://schemas.authnomicon.org/js/oauth2/http/authorize/completeTransactionFunc',
-  'http://schemas.authnomicon.org/js/oauth2/http/middleware/prompt',
+  //'http://schemas.authnomicon.org/js/oauth2/http/middleware/prompt',
   'http://i.bixbyjs.org/http/middleware/parse'
 ];
